@@ -6,26 +6,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter a scripture reference (e.g., 'John 3:16' or 'Proverbs 3:5-6'):");
-        string referenceInput = Console.ReadLine();
-        Console.WriteLine("Enter the scripture text:");
-        string scriptureText = Console.ReadLine();
+        var scripture = new Scripture("John 3:16", "For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.");
+        Console.Clear();
+        Console.WriteLine(scripture);
 
-        Scripture scripture = new Scripture(referenceInput, scriptureText);
-
-        do
+        while (true)
         {
-            Console.Clear();
-            scripture.Display();
             Console.WriteLine("\nPress enter to hide words or type 'quit' to exit.");
-            string command = Console.ReadLine();
-
-            if (command.ToLower() == "quit")
-            {
-                break;
-            }
+            var input = Console.ReadLine();
+            if (input.ToLower() == "quit") break;
 
             scripture.HideRandomWords();
-        } while (!scripture.AllWordsHidden);
+            Console.Clear();
+            Console.WriteLine(scripture);
+
+            if (scripture.IsFullyHidden)
+            {
+                Console.WriteLine("\nAll words are hidden. Exiting program.");
+                break;
+            }
+        }
     }
 }
+

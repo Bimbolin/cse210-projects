@@ -1,8 +1,8 @@
-class Scripture
+public class Scripture
 {
-    public Reference Reference { get; private set; }
-    public List<Word> Words { get; private set; }
-    public bool AllWordsHidden => Words.All(word => word.IsHidden);
+    private Reference Reference { get; set; }
+    private List<Word> Words { get; set; }
+    public bool IsFullyHidden => Words.All(w => w.IsHidden);
 
     public Scripture(string reference, string text)
     {
@@ -12,19 +12,15 @@ class Scripture
 
     public void HideRandomWords()
     {
-        Random random = new Random();
+        var random = new Random();
         foreach (var word in Words)
         {
-            if (random.Next(2) == 0) // 50% chance to hide each word
-            {
-                word.Hide();
-            }
+            if (random.Next(2) == 0) word.Hide();
         }
     }
 
-    public void Display()
+    public override string ToString()
     {
-        Console.WriteLine(Reference);
-        Console.WriteLine(string.Join(" ", Words.Select(word => word.ToString())));
+        return $"{Reference} {string.Join(" ", Words.Select(w => w.ToString()))}";
     }
 }
