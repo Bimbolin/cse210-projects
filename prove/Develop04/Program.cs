@@ -16,8 +16,8 @@ class Program
 
         switch (choice)
         {
-            case 1:
-                BreathingActivity breathingActivity = new BreathingActivity();
+            case 1:BreathingActivity
+                 breathingActivity = new BreathingActivity();
                 Console.Write("Enter the duration (in seconds): ");
                 int breathingDuration = int.Parse(Console.ReadLine());
                 breathingActivity.SetDuration(breathingDuration);
