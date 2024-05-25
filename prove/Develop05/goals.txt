@@ -1,0 +1,23 @@
+{
+  "Goals": [
+    {
+      "Name": "Give a talk",
+      "Description": "Speak in SM",
+      "Points": 50,
+      "IsComplete": false
+    },
+    {
+      "Name": "Pray ",
+      "Description": "Pray morning and night",
+      "Points": 50,
+      "IsComplete": false
+    },
+    {
+      "Name": "Attend the temple",
+      "Description": "P O",
+      "Points": 50,
+      "IsComplete": false
+    }
+  ],
+  "Score": 0
+}
