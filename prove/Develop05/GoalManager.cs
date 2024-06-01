@@ -1,10 +1,4 @@
-using System;
-using System.IO;
 using System.Text.Json;
-
-
-
-[Serializable]
 public class GoalManager
 {
     public List<Goal> Goals { get; set; }

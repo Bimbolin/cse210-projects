@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
 
 public class Program
@@ -140,5 +138,3 @@ public class Program
         Console.WriteLine("Event recorded successfully!");
     }
 }
-
-// Define your GoalManager, Goal, SimpleGoal, EternalGoal, and ChecklistGoal classes here

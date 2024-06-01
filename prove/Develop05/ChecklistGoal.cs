@@ -1,4 +1,3 @@
-[Serializable]
 public class ChecklistGoal : Goal
 {
     private int TargetCount;

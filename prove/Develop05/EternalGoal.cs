@@ -9,7 +9,7 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
-        Points += _pointsPerEvent; // Corrected to add points per event
+        Points += _pointsPerEvent; 
     }
 
     protected override string GetStatus()

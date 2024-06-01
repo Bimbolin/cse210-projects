@@ -7,7 +7,7 @@ public class SimpleGoal : Goal
         if (!IsComplete)
         {
             IsComplete = true;
-            Points = Points; // Assign the points for completing the goal
+            Points = Points; 
             Console.WriteLine($"{Name} completed!");
         }
     }
